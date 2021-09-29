@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'com.github.tomakehurst:wiremock-jre8-standalone:2.31.0'
+    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-rc-1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
